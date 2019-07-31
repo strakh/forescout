@@ -12,10 +12,12 @@ class PeriodicTask {
 
 public:
     explicit PeriodicTask(int interval): interval_sec(interval) {};
+    virtual ~PeriodicTask() {};
     void UpdateInterval(int interval) {
         interval_sec = interval;
     }
     virtual void run() = 0;
+    int getInterval() const { return interval_sec; }
 private:
     atomic_int interval_sec;
     // context

@@ -6,19 +6,19 @@
 #define FORESCOUT_TASKMANAGER_H
 
 #include <ctime>
-#include <queue>
+#include <vector>
 #include "PeriodicTask.h"
 
 class TaskManager {
 
 public:
     void onNewTime(const std::time_t& external);
-    void addTask(PeriodicTask task); // todo: return shared_ptr
+    void addTask(const std::shared_ptr<PeriodicTask>& task);
 
 
 private:
     std::time_t current = 0;
-    std::priority_queue<PeriodicTask> tasks; // todo: shared_ptr
+    std::vector<std::shared_ptr<PeriodicTask>> tasks;
 
 };
 
