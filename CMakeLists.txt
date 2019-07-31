@@ -3,4 +3,4 @@ project(forescout)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(forescout main.cpp)
+add_executable(forescout main.cpp TaskManager.cpp TaskManager.h PeriodicTask.cpp PeriodicTask.h)

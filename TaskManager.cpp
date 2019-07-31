@@ -3,3 +3,9 @@
 //
 
 #include "TaskManager.h"
+
+void TaskManager::onNewTime(const std::time_t& external) {
+    if (external > current) {
+        current = external;
+    }
+}
