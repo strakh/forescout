@@ -26,6 +26,8 @@ public:
     void addTask(const PeriodicTaskPtr& task);
 //    void updateTaskInterval(const PeriodicTaskPtr& task, int interval);
 //    void removeTask(const PeriodicTaskPtr& task);
+    std::time_t getLastTimestamp() const { return current; }
+    size_t countTasks() const { return tasks.size(); }
 
 
 private:

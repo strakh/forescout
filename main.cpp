@@ -3,7 +3,7 @@
 
 class MyPeriodicTask: public PeriodicTask {
 public:
-    MyPeriodicTask(int interval): PeriodicTask(interval) {};
+    explicit MyPeriodicTask(int interval): PeriodicTask(interval) {};
     void run() override {
         std::cout << "running my task every: " << getInterval() << " sec" << std:: endl;
     }
