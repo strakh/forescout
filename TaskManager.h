@@ -6,19 +6,31 @@
 #define FORESCOUT_TASKMANAGER_H
 
 #include <ctime>
-#include <vector>
+#include <queue>
 #include "PeriodicTask.h"
+
+using PeriodicTaskPtr = std::shared_ptr<PeriodicTask>;
+
+struct CmpPeriodicTaskPrts
+{
+    bool operator()(const PeriodicTaskPtr& lhs, const PeriodicTaskPtr& rhs) const
+    {
+        return lhs->getTimestamp() > rhs->getTimestamp();
+    }
+};
 
 class TaskManager {
 
 public:
     void onNewTime(const std::time_t& external);
-    void addTask(const std::shared_ptr<PeriodicTask>& task);
+    void addTask(const PeriodicTaskPtr& task);
+//    void updateTaskInterval(const PeriodicTaskPtr& task, int interval);
+//    void removeTask(const PeriodicTaskPtr& task);
 
 
 private:
     std::time_t current = 0;
-    std::vector<std::shared_ptr<PeriodicTask>> tasks;
+    std::priority_queue<PeriodicTaskPtr, std::vector<PeriodicTaskPtr>, CmpPeriodicTaskPrts> tasks;
 
 };
 
