@@ -6,17 +6,17 @@
 #include <iostream>
 #include "TaskManager.h"
 
-BOOST_AUTO_TEST_SUITE(TaskManagerSuite)
+class DefinedPeriodicTask: public PeriodicTask<void> {
+public:
+    explicit DefinedPeriodicTask(int interval): PeriodicTask(interval) {};
+    void run() override {
+        std::cout << "running task every: " << getInterval() << " sec" << std:: endl;
+        ++runCounter;
+    }
+    atomic_int runCounter = 0;
+};
 
-    class DefinedPeriodicTask: public PeriodicTask {
-    public:
-        explicit DefinedPeriodicTask(int interval): PeriodicTask(interval) {};
-        void run() override {
-            std::cout << "running task every: " << getInterval() << " sec" << std:: endl;
-            ++runCounter;
-        }
-        atomic_int runCounter = 0;
-    };
+BOOST_AUTO_TEST_SUITE(TaskManagerSuite)
 
     BOOST_AUTO_TEST_CASE(testCreate) {
         BOOST_CHECK_NO_THROW(TaskManager());
@@ -29,6 +29,15 @@ BOOST_AUTO_TEST_SUITE(TaskManagerSuite)
         BOOST_CHECK_EQUAL(manager->countTasks(), 1);
         BOOST_CHECK_EQUAL(task->runCounter, 0);
     }
+
+//    BOOST_AUTO_TEST_CASE(testRemoveTask) {
+//        auto manager = std::make_unique<TaskManager>();
+//        auto task = std::make_shared<DefinedPeriodicTask>(5);
+//        manager->addTask(task);
+//        BOOST_CHECK_EQUAL(manager->countTasks(), 1);
+//        manager->removeTask(task);
+//        BOOST_CHECK_EQUAL(manager->countTasks(), 0);
+//    }
 
     BOOST_AUTO_TEST_CASE(testTimestampExternallyUpdated) {
         auto manager = std::make_unique<TaskManager>();
@@ -118,5 +127,23 @@ BOOST_AUTO_TEST_SUITE(TaskManagerSuite)
         BOOST_CHECK_EQUAL(task1->runCounter, 5);
         BOOST_CHECK_EQUAL(task2->runCounter, 3);
     }
+
+//    BOOST_AUTO_TEST_CASE(testTaskUpdateInterval) {
+//        auto manager = std::make_unique<TaskManager>();
+//        auto task = std::make_shared<DefinedPeriodicTask>(2);
+//        manager->addTask(task);
+//        manager->onNewTime(0);
+//        manager->onNewTime(2);
+//        BOOST_CHECK_EQUAL(task->runCounter, 1);
+//        manager->updateTaskInterval(task, 3);
+//        manager->onNewTime(4);
+//        BOOST_CHECK_EQUAL(task->runCounter, 1);
+//        manager->onNewTime(5);
+//        BOOST_CHECK_EQUAL(task->runCounter, 2);
+//        manager->onNewTime(7);
+//        BOOST_CHECK_EQUAL(task->runCounter, 2);
+//        manager->onNewTime(8);
+//        BOOST_CHECK_EQUAL(task->runCounter, 3);
+//    }
 
 BOOST_AUTO_TEST_SUITE_END()

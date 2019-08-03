@@ -9,7 +9,34 @@
 #include <queue>
 #include "PeriodicTask.h"
 
-using PeriodicTaskPtr = std::shared_ptr<PeriodicTask>;
+
+template<
+    class T,
+    class Container = std::vector<T>,
+    class Compare = std::less<typename Container::value_type>
+> class accessible_priority_queue : public std::priority_queue<T, std::vector<T>>
+{
+public:
+    auto search(const T& value) const {
+        return std::find(this->c.begin(), this->c.end(), value);
+    }
+    void update() {
+        std::make_heap(this->c.begin(), this->c.end(), this->comp);
+    }
+    bool remove(const T& value) {
+        auto it = std::find(this->c.begin(), this->c.end(), value);
+        if (it != this->c.end()) {
+            this->c.erase(it);
+            std::make_heap(this->c.begin(), this->c.end(), this->comp);
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+};
+
+using PeriodicTaskPtr = std::shared_ptr<PeriodicTaskBase>;
 
 struct CmpPeriodicTaskPrts
 {
@@ -34,6 +61,7 @@ private:
     std::mutex tasksLock;
     std::time_t current = 0;
     std::priority_queue<PeriodicTaskPtr, std::vector<PeriodicTaskPtr>, CmpPeriodicTaskPrts> tasks;
+//    accessible_priority_queue<PeriodicTaskPtr, std::vector<PeriodicTaskPtr>, CmpPeriodicTaskPrts> tasks;
 
 };
 

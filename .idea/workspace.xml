@@ -24,8 +24,8 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="forescout" targetName="test" />
       <config projectName="forescout" targetName="forescout" />
+      <config projectName="forescout" targetName="test" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -36,8 +36,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8bdf11b2-2ae1-414b-ad44-df202349c41a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PeriodicTask.h" beforeDir="false" afterPath="$PROJECT_DIR$/PeriodicTask.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PeriodicTaskTst.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PeriodicTaskTst.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaskManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaskManagerTst.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManagerTst.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,25 +85,25 @@
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testMultipleTasksExecution" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="forescout" TARGET_NAME="test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="forescout" RUN_TARGET_NAME="test" TEST_CLASS="TaskManagerSuite" TEST_METHOD="testMultipleTasksExecution" TEST_MODE="SUITE_TEST">
+    <configuration name="testMultipleTasksExecution" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="forescout" TARGET_NAME="test" RUN_TARGET_PROJECT_NAME="forescout" RUN_TARGET_NAME="test" TEST_CLASS="TaskManagerSuite" TEST_METHOD="testMultipleTasksExecution" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testPeriodicalTaskExecution" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="forescout" TARGET_NAME="test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="forescout" RUN_TARGET_NAME="test" TEST_CLASS="TaskManagerSuite" TEST_METHOD="testPeriodicalTaskExecution" TEST_MODE="SUITE_TEST">
+    <configuration name="testRemoveTask" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="forescout" TARGET_NAME="test" RUN_TARGET_PROJECT_NAME="forescout" RUN_TARGET_NAME="test" TEST_CLASS="TaskManagerSuite" TEST_METHOD="testRemoveTask" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testTaskTimestampInit" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="forescout" TARGET_NAME="test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="forescout" RUN_TARGET_NAME="test" TEST_CLASS="TaskManagerSuite" TEST_METHOD="testTaskTimestampInit" TEST_MODE="SUITE_TEST">
+    <configuration name="testTaskUpdateInterval" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="forescout" TARGET_NAME="test" RUN_TARGET_PROJECT_NAME="forescout" RUN_TARGET_NAME="test" TEST_CLASS="TaskManagerSuite" TEST_METHOD="testTaskUpdateInterval" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testTasksExecutionJumpingTime" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="forescout" TARGET_NAME="test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="forescout" RUN_TARGET_NAME="test" TEST_CLASS="TaskManagerSuite" TEST_METHOD="testTasksExecutionJumpingTime" TEST_MODE="SUITE_TEST">
+    <configuration name="testTasksExecutionJumpingTime" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="forescout" TARGET_NAME="test" RUN_TARGET_PROJECT_NAME="forescout" RUN_TARGET_NAME="test" TEST_CLASS="TaskManagerSuite" TEST_METHOD="testTasksExecutionJumpingTime" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -112,19 +116,19 @@
     </configuration>
     <list>
       <item itemvalue="Boost.Test.TaskManagerSuite" />
-      <item itemvalue="Boost.Test.testPeriodicalTaskExecution" />
-      <item itemvalue="Boost.Test.testTaskTimestampInit" />
+      <item itemvalue="CMake Application.forescout" />
+      <item itemvalue="Boost.Test.testTaskUpdateInterval" />
+      <item itemvalue="Boost.Test.testRemoveTask" />
       <item itemvalue="Boost.Test.testMultipleTasksExecution" />
       <item itemvalue="Boost.Test.testTasksExecutionJumpingTime" />
-      <item itemvalue="CMake Application.forescout" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Boost.Test.TaskManagerSuite" />
-        <item itemvalue="Boost.Test.testPeriodicalTaskExecution" />
         <item itemvalue="Boost.Test.testTasksExecutionJumpingTime" />
         <item itemvalue="Boost.Test.testMultipleTasksExecution" />
-        <item itemvalue="Boost.Test.testTaskTimestampInit" />
+        <item itemvalue="Boost.Test.testTaskUpdateInterval" />
+        <item itemvalue="Boost.Test.testRemoveTask" />
       </list>
     </recent_temporary>
   </component>
@@ -139,7 +143,8 @@
       <option name="presentableId" value="Default" />
       <updated>1564598883337</updated>
       <workItem from="1564598886396" duration="25848000" />
-      <workItem from="1564750058738" duration="7969000" />
+      <workItem from="1564750058738" duration="13249000" />
+      <workItem from="1564850005888" duration="4342000" />
     </task>
     <servers />
   </component>
