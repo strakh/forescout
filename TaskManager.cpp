@@ -35,15 +35,15 @@ void TaskManager::addTask(const PeriodicTaskPtr& task) {
     tasks.emplace(task);
 }
 
-//void TaskManager::removeTask(const PeriodicTaskPtr& task) {
-//    std::lock_guard<std::mutex> guard(tasksLock);
-//    tasks.remove(task);
-//}
-//
-//void TaskManager::updateTaskInterval(const PeriodicTaskPtr& task, int interval) {
-//    std::lock_guard<std::mutex> guard(tasksLock);
-//    auto old = task->getInterval();
-//    task->updateInterval(interval);
-//    task->updateTimestamp(task->getTimestamp() - old);
-//    tasks.update();
-//}
+void TaskManager::removeTask(const PeriodicTaskPtr& task) {
+    std::lock_guard<std::mutex> guard(tasksLock);
+    tasks.remove(task);
+}
+
+void TaskManager::updateTaskInterval(const PeriodicTaskPtr& task, int interval) {
+    std::lock_guard<std::mutex> guard(tasksLock);
+    auto old = task->getInterval();
+    task->updateInterval(interval);
+    task->updateTimestamp(task->getTimestamp() - old);
+    tasks.update();
+}

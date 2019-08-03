@@ -14,7 +14,7 @@ template<
     class T,
     class Container = std::vector<T>,
     class Compare = std::less<typename Container::value_type>
-> class accessible_priority_queue : public std::priority_queue<T, std::vector<T>>
+> class accessible_priority_queue : public std::priority_queue<T, Container, Compare>
 {
 public:
     auto search(const T& value) const {
@@ -51,8 +51,8 @@ class TaskManager {
 public:
     void onNewTime(const std::time_t& external);
     void addTask(const PeriodicTaskPtr& task);
-//    void updateTaskInterval(const PeriodicTaskPtr& task, int interval);
-//    void removeTask(const PeriodicTaskPtr& task);
+    void updateTaskInterval(const PeriodicTaskPtr& task, int interval);
+    void removeTask(const PeriodicTaskPtr& task);
     std::time_t getLastTimestamp() const { return current; }
     size_t countTasks() const { return tasks.size(); }
 
@@ -60,8 +60,7 @@ public:
 private:
     std::mutex tasksLock;
     std::time_t current = 0;
-    std::priority_queue<PeriodicTaskPtr, std::vector<PeriodicTaskPtr>, CmpPeriodicTaskPrts> tasks;
-//    accessible_priority_queue<PeriodicTaskPtr, std::vector<PeriodicTaskPtr>, CmpPeriodicTaskPrts> tasks;
+    accessible_priority_queue<PeriodicTaskPtr, std::vector<PeriodicTaskPtr>, CmpPeriodicTaskPrts> tasks;
 
 };
 

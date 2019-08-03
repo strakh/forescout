@@ -36,12 +36,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8bdf11b2-2ae1-414b-ad44-df202349c41a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PeriodicTask.h" beforeDir="false" afterPath="$PROJECT_DIR$/PeriodicTask.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PeriodicTaskTst.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PeriodicTaskTst.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaskManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaskManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManagerTst.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManagerTst.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +140,7 @@
       <updated>1564598883337</updated>
       <workItem from="1564598886396" duration="25848000" />
       <workItem from="1564750058738" duration="13249000" />
-      <workItem from="1564850005888" duration="4342000" />
+      <workItem from="1564850005888" duration="4569000" />
     </task>
     <servers />
   </component>
