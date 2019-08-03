@@ -1,6 +1,7 @@
 #include <iostream>
 #include "TaskManager.h"
 
+using namespace forescout;
 class MyPeriodicTask: public PeriodicTask<std::string> {
 
 public:

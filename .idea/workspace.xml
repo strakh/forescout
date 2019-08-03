@@ -36,8 +36,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8bdf11b2-2ae1-414b-ad44-df202349c41a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PeriodicTask.h" beforeDir="false" afterPath="$PROJECT_DIR$/PeriodicTask.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PeriodicTaskTst.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PeriodicTaskTst.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaskManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaskManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskManagerTst.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManagerTst.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,32 +78,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Boost.Test.TaskManagerSuite">
+  <component name="RunManager" selected="CMake Application.forescout">
+    <configuration name="PeriodicTaskSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="forescout" TARGET_NAME="test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="forescout" RUN_TARGET_NAME="test" TEST_CLASS="PeriodicTaskSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TaskManagerSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="forescout" TARGET_NAME="test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="forescout" RUN_TARGET_NAME="test" TEST_CLASS="TaskManagerSuite" TEST_MODE="SUITE_TEST">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-        <option name="BeforeTestRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testMultipleTasksExecution" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="forescout" TARGET_NAME="test" RUN_TARGET_PROJECT_NAME="forescout" RUN_TARGET_NAME="test" TEST_CLASS="TaskManagerSuite" TEST_METHOD="testMultipleTasksExecution" TEST_MODE="SUITE_TEST">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-        <option name="BeforeTestRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testRemoveTask" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="forescout" TARGET_NAME="test" RUN_TARGET_PROJECT_NAME="forescout" RUN_TARGET_NAME="test" TEST_CLASS="TaskManagerSuite" TEST_METHOD="testRemoveTask" TEST_MODE="SUITE_TEST">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-        <option name="BeforeTestRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testTaskUpdateInterval" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="forescout" TARGET_NAME="test" RUN_TARGET_PROJECT_NAME="forescout" RUN_TARGET_NAME="test" TEST_CLASS="TaskManagerSuite" TEST_METHOD="testTaskUpdateInterval" TEST_MODE="SUITE_TEST">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-        <option name="BeforeTestRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testTasksExecutionJumpingTime" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="forescout" TARGET_NAME="test" RUN_TARGET_PROJECT_NAME="forescout" RUN_TARGET_NAME="test" TEST_CLASS="TaskManagerSuite" TEST_METHOD="testTasksExecutionJumpingTime" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -112,19 +98,13 @@
     </configuration>
     <list>
       <item itemvalue="Boost.Test.TaskManagerSuite" />
+      <item itemvalue="Boost.Test.PeriodicTaskSuite" />
       <item itemvalue="CMake Application.forescout" />
-      <item itemvalue="Boost.Test.testTaskUpdateInterval" />
-      <item itemvalue="Boost.Test.testRemoveTask" />
-      <item itemvalue="Boost.Test.testMultipleTasksExecution" />
-      <item itemvalue="Boost.Test.testTasksExecutionJumpingTime" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Boost.Test.PeriodicTaskSuite" />
         <item itemvalue="Boost.Test.TaskManagerSuite" />
-        <item itemvalue="Boost.Test.testTasksExecutionJumpingTime" />
-        <item itemvalue="Boost.Test.testMultipleTasksExecution" />
-        <item itemvalue="Boost.Test.testTaskUpdateInterval" />
-        <item itemvalue="Boost.Test.testRemoveTask" />
       </list>
     </recent_temporary>
   </component>
@@ -140,7 +120,7 @@
       <updated>1564598883337</updated>
       <workItem from="1564598886396" duration="25848000" />
       <workItem from="1564750058738" duration="13249000" />
-      <workItem from="1564850005888" duration="4569000" />
+      <workItem from="1564850005888" duration="7170000" />
     </task>
     <servers />
   </component>
