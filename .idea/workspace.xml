@@ -37,6 +37,7 @@
     <list default="true" id="8bdf11b2-2ae1-414b-ad44-df202349c41a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaskManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskManagerTst.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManagerTst.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +139,7 @@
       <option name="presentableId" value="Default" />
       <updated>1564598883337</updated>
       <workItem from="1564598886396" duration="25848000" />
-      <workItem from="1564750058738" duration="5423000" />
+      <workItem from="1564750058738" duration="7969000" />
     </task>
     <servers />
   </component>

@@ -15,7 +15,7 @@ BOOST_AUTO_TEST_SUITE(TaskManagerSuite)
             std::cout << "running task every: " << getInterval() << " sec" << std:: endl;
             ++runCounter;
         }
-        int runCounter = 0;
+        atomic_int runCounter = 0;
     };
 
     BOOST_AUTO_TEST_CASE(testCreate) {
