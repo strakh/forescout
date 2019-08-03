@@ -29,7 +29,7 @@ void TaskManager::onNewTime(const std::time_t& external) {
                 task->updateTimestamp(task->getTimestamp());
                 tasks.pop();
                 tasks.emplace(task);
-                auto future = std::async(std::launch ::async, [t=task]() {t->run();});
+                auto future = std::async(std::launch::async, [t=task]() {t->run();});
                 std::cout << "run & updated task with interval " << task->getInterval() << " to ts "
                           << task->getTimestamp() << std::endl;
             }
