@@ -31,6 +31,7 @@ public:
 
 
 private:
+    std::mutex tasksLock;
     std::time_t current = 0;
     std::priority_queue<PeriodicTaskPtr, std::vector<PeriodicTaskPtr>, CmpPeriodicTaskPrts> tasks;
 
