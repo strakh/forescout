@@ -3,6 +3,7 @@
 //
 
 #define BOOST_TEST_MODULE forescout test
+
 #include <boost/test/included/unit_test.hpp>
 #include "PeriodicTask.h"
 
@@ -18,7 +19,7 @@ namespace forescout {
 
         class ContextPeriodicTask : public PeriodicTask<int> {
         public:
-            explicit ContextPeriodicTask(std::time_t interval, const std::shared_ptr<int> &context) : PeriodicTask(
+            explicit ContextPeriodicTask(std::time_t interval, const std::shared_ptr<int>& context) : PeriodicTask(
                     interval, context) {};
 
             void run() override {

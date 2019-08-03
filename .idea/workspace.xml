@@ -35,13 +35,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bdf11b2-2ae1-414b-ad44-df202349c41a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PeriodicTask.h" beforeDir="false" afterPath="$PROJECT_DIR$/PeriodicTask.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PeriodicTaskTst.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PeriodicTaskTst.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaskManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaskManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManagerTst.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManagerTst.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +55,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectId" id="1Ogq3knMvH2hMXQvaWDtniySqYk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -64,7 +64,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -78,7 +78,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.forescout">
+  <component name="RunManager" selected="Boost.Test.TaskManagerSuite">
     <configuration name="PeriodicTaskSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="forescout" TARGET_NAME="test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="forescout" RUN_TARGET_NAME="test" TEST_CLASS="PeriodicTaskSuite" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -103,8 +103,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Boost.Test.PeriodicTaskSuite" />
         <item itemvalue="Boost.Test.TaskManagerSuite" />
+        <item itemvalue="Boost.Test.PeriodicTaskSuite" />
       </list>
     </recent_temporary>
   </component>
@@ -120,7 +120,7 @@
       <updated>1564598883337</updated>
       <workItem from="1564598886396" duration="25848000" />
       <workItem from="1564750058738" duration="13249000" />
-      <workItem from="1564850005888" duration="7170000" />
+      <workItem from="1564850005888" duration="9374000" />
     </task>
     <servers />
   </component>

@@ -17,15 +17,11 @@ namespace forescout {
     >
     class accessible_priority_queue : public std::priority_queue<T, Container, Compare> {
     public:
-        auto search(const T &value) const {
-            return std::find(this->c.begin(), this->c.end(), value);
-        }
-
         void update() {
             std::make_heap(this->c.begin(), this->c.end(), this->comp);
         }
 
-        bool remove(const T &value) {
+        bool remove(const T& value) {
             auto it = std::find(this->c.begin(), this->c.end(), value);
             if (it != this->c.end()) {
                 this->c.erase(it);
@@ -40,7 +36,7 @@ namespace forescout {
     using PeriodicTaskPtr = std::shared_ptr<PeriodicTaskBase>;
 
     struct CmpPeriodicTaskPrts {
-        bool operator()(const PeriodicTaskPtr &lhs, const PeriodicTaskPtr &rhs) const {
+        bool operator()(const PeriodicTaskPtr& lhs, const PeriodicTaskPtr& rhs) const {
             return lhs->getTimestamp() > rhs->getTimestamp();
         }
     };
@@ -48,25 +44,23 @@ namespace forescout {
     class TaskManager {
 
     public:
-        void onNewTime(const std::time_t &external);
+        void onNewTime(const std::time_t& external);
 
-        void addTask(const PeriodicTaskPtr &task);
+        void addTask(const PeriodicTaskPtr& task);
 
-        void updateTaskInterval(const PeriodicTaskPtr &task, std::time_t interval);
+        void updateTaskInterval(const PeriodicTaskPtr& task, const std::time_t& interval);
 
-        void removeTask(const PeriodicTaskPtr &task);
+        void removeTask(const PeriodicTaskPtr& task);
 
-        std::time_t getLastTimestamp() const { return current; }
+        const std::time_t& getLastTimestamp() const { return current; }
 
-        size_t countTasks() const { return tasks.size(); }
+        size_t countTasks() const;
 
 
     private:
-        std::mutex tasksLock;
+        mutable std::mutex tasksLock;
         std::time_t current = 0;
         accessible_priority_queue<PeriodicTaskPtr, std::vector<PeriodicTaskPtr>, CmpPeriodicTaskPrts> tasks;
-
     };
-
 }
 #endif //FORESCOUT_TASKMANAGER_H

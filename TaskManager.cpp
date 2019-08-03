@@ -7,7 +7,7 @@
 #include "TaskManager.h"
 
 namespace forescout {
-    void TaskManager::onNewTime(const std::time_t &external) {
+    void TaskManager::onNewTime(const std::time_t& external) {
         std::cout << external << " seconds passed" << std::endl;
         std::lock_guard<std::mutex> guard(tasksLock);
         if (external >= current) {
@@ -32,21 +32,26 @@ namespace forescout {
         }
     }
 
-    void TaskManager::addTask(const PeriodicTaskPtr &task) {
+    void TaskManager::addTask(const PeriodicTaskPtr& task) {
         std::lock_guard<std::mutex> guard(tasksLock);
         tasks.emplace(task);
     }
 
-    void TaskManager::removeTask(const PeriodicTaskPtr &task) {
+    void TaskManager::removeTask(const PeriodicTaskPtr& task) {
         std::lock_guard<std::mutex> guard(tasksLock);
         tasks.remove(task);
     }
 
-    void TaskManager::updateTaskInterval(const PeriodicTaskPtr &task, std::time_t interval) {
+    void TaskManager::updateTaskInterval(const PeriodicTaskPtr& task, const std::time_t& interval) {
         std::lock_guard<std::mutex> guard(tasksLock);
         auto old = task->getInterval();
         task->updateInterval(interval);
         task->updateTimestamp(task->getTimestamp() - old);
         tasks.update();
+    }
+
+    size_t TaskManager::countTasks() const {
+        std::lock_guard<std::mutex> guard(tasksLock);
+        return tasks.size();
     }
 }
