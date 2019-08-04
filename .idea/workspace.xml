@@ -24,8 +24,8 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="forescout" targetName="forescout" />
       <config projectName="forescout" targetName="test" />
+      <config projectName="forescout" targetName="forescout" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -35,12 +35,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bdf11b2-2ae1-414b-ad44-df202349c41a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PeriodicTask.h" beforeDir="false" afterPath="$PROJECT_DIR$/PeriodicTask.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PeriodicTaskTst.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PeriodicTaskTst.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
