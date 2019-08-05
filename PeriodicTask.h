@@ -6,8 +6,9 @@
 #define FORESCOUT_PERIODICTASK_H
 
 
-#include <stdatomic.h>
 #include <ctime>
+#include <atomic>
+#include <memory>
 
 namespace forescout {
     class PeriodicTaskBase {
@@ -31,7 +32,6 @@ namespace forescout {
         void updateInterval(const std::time_t& interval) {
             interval_sec = interval;
         }
-
         std::atomic<std::time_t> interval_sec;
         std::atomic<std::time_t> timestamp;
 

@@ -6,7 +6,10 @@
 #define FORESCOUT_TASKMANAGER_H
 
 #include <ctime>
+#include <algorithm>
 #include <queue>
+#include <vector>
+#include <mutex>
 #include "PeriodicTask.h"
 
 namespace forescout {
